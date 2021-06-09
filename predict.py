@@ -14,7 +14,7 @@ def Dataization(img_path):
 
 
 def main():
-    image_dir = 'C:\\Users\\175767\\PycharmProjects\\flask\\static\\img\\'
+    image_dir = 'C:\\Users\\175767\\PycharmProjects\\flask\\static\\img\\test\\'
     categories = ['COVID', 'Non-COVID']
     src = []
     name = []

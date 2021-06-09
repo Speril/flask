@@ -27,7 +27,7 @@ def ct():
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
-    image_dir = 'C:/Users/175767/PycharmProjects/flask/static/img/'
+    image_dir = 'C:\\Users\\175767\\PycharmProjects\\flask\\static\\img\\test\\'
     if request.method == 'POST':
         root_path()
 
