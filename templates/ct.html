@@ -73,10 +73,13 @@
                 <p class="lead fw-normal">인공지능 모델을 이용하여 97%의 정확성으로 사용자 스스로 코로나 양성여부를 진단할 수 있게 됩니다.</p>
 
                   <!--사진 업로드 하는 부분-->
-                 <form action = "http://localhost:5000/fileupload" method="POST" enctype="multipart/form-data"></form>
-                 <input type="file" name="file"/>
-                 <input type="submit"/>
-
+               <form align="center" action="/result" method="POST" enctype="multipart/form-data">
+			<h2 style="color: #353535;">Upload Your Image</h2>
+			<input type="file" name="image" id="image" value="image" onchange="previewImage(this,'view_area')"/>
+			<input type="submit" value="확인"/>
+			<br><br>
+			<div align="center" id='view_area'></div>
+		</form>
 
               <div class="product-device shadow-sm d-none d-md-block"></div>
               <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
