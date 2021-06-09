@@ -1,5 +1,6 @@
 import os, re, glob
 import cv2
+from flask import Flask, jsonify
 import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array, save_img
@@ -31,7 +32,7 @@ def main():
     predict = model.predict_classes(test)
 
     for i in range(len(test)):
-        result = (name[i] + " : , Predict : " + str(categories[predict[i]]))
+        result = str(categories[predict[i]])
 
     return result
 

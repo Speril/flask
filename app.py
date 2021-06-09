@@ -27,12 +27,12 @@ def ct():
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():
-    image_dir = 'C:\\Users\\175767\\PycharmProjects\\flask\\static\\img\\test\\'
+    image_dir = '.\\static\\img\\test\\'
     if request.method == 'POST':
         root_path()
 
         image = request.files['image']
-        image.save('./flask/static/img/' + str(image.filename))
+        image.save('.\\flask\\static\\img\\' + str(image.filename))
         image_path = (image_dir+str(image.filename))
         image_type = str(image.filename).split('.')[1]
         # img file
@@ -40,7 +40,7 @@ def result():
             print('Type is Image')
             pre_result = predict.main()
             # detected_img_path = '../static/img/' + str(detected_img.split('/')[-1])
-    return render_template("result.html", Result=pre_result, image_file=image_path)
+    return render_template("result.html", Result=pre_result)
 
 
 @app.route('/map')
