@@ -32,7 +32,7 @@ def main():
     predict = model.predict_classes(test)
 
     for i in range(len(test)):
-        result = str(categories[predict[i]])
+        result = str(categories[predict[0]])
 
     return result
 
