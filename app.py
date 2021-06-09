@@ -38,7 +38,7 @@ def result():
         # img file
         if image_type in ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG']:
             print('Type is Image')
-            pre_result = predict.main(image_path)
+            pre_result = predict.main()
             # detected_img_path = '../static/img/' + str(detected_img.split('/')[-1])
     return render_template("result.html", Result=pre_result, image_file=image_path)
 
